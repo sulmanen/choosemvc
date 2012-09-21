@@ -1,0 +1,27 @@
+/* CSS declarations go here */
+body {
+	font-family: 'Droid Sans'
+}
+a:visited {
+	color: black;
+}
+.title {
+	font-weight: "100";
+	font-size: 40px;
+}
+
+.username {
+	font-style: italic;
+	color: green;
+}
+
+.framework {
+	margin-top: 10px;
+	font-size: 14px;
+	color: black;
+}
+
+.framework_link {
+	text-decoration: none;
+	font-family: ;
+}

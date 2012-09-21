@@ -1,0 +1,63 @@
+<head>
+  <title>Candy day</title>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+</head>
+
+<body>
+  {{> hello}}
+  {{> frameworks}}
+
+   <p>The presentations and demo are on Friday the 21, 5 slides and 6 minutes!</p>
+
+<h3>The task</h3>
+<p>
+   Prepare slides with a short description of the framework and:
+</p>
+<ul>
+<li>Architecture</li>
+<li>Strengths</li>
+<li>Weaknesses</li>
+</ul>
+
+<h4>Please evaluate the following:</h4>
+<ul>
+<li>documentation, code documentation, reference & community</li>
+<li>ramped up productivity</li>
+<li>testability</li>
+<li>learnability</li>
+<li>debugging, do the dom and script loads make sense</li>
+<li>code quality</li>
+<li>attractiveness of the technology – (recruitment purposes)</li>
+<li> is it easy to update dependencies</li>
+<li>can I make a widget library using these tools</li>
+<li> editor support</li>
+<li> how is it to debug in the browser</li>
+<li> is the code produced DRY</li>
+<li>how would i18n fit in</li>
+<li> can I change the template engine</li>
+</ul>
+<p>
+If you have time, prepare a short hands on demo of your choice.
+</p>
+</body>
+
+<template name="hello">
+  <img src="http://www.efecte.com/userData/efecte-2012/logo/logo.png" alt="Efecte Rocks!"/>
+  <h1 class="title">CandyDay: javascript MVC frameworks.</h1>
+  <p>Commit to presenting one framework by entering your name!</p>
+  <p>More than one name is a group.</p>
+</template>
+
+<template name="frameworks">
+	<form>
+  {{#each frameworks}}
+  <div class="framework">
+     <a class="framework_link" target="_blank" href="{{url}}">{{name}}</a><br/>
+  	 <input id="{{_id}}" class="framework_name" type="text"/>
+  	 {{#each users}}
+  	 <span class="username">{{name}}</span>
+  	 {{/each}}
+  	</div>
+  {{/each}}
+</form>
+</template>
